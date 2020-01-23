@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /home/medatech-user/driver/peak-linux-driver-8.9.0
+sudo make clean
+sudo make DNG=NO_DONGLE_SUPPORT PCI=NO_PCI_SUPPORT PCIEC=NO_PCIEC_SUPPORT ISA=NO_ISA_SUPPORT PCC=NO_PCCARD_SUPPORT
+sudo make install
+sudo modprobe pcan
+echo "Installed and loaded successfully."
